@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+}
+
+p{
+    color: white;
+    font-family: roboto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tittle {
+    color: #ccc;
+    min-height: 20vh;
+    font-family: roboto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider{
+    cursor: pointer;
+    background: #ccc;
+    width: 80px;
+    height: 40px;
+    border: 4px solid #8f8e8e;
+    border-radius: 40px;
+    position: relative;
+    transition: all 300ms ease-in-out;
+}
+.button{
+    background: rgb(31, 247, 31);
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    pointer-events: none;
+    top: 6px;
+    left: 6px;
+    position: absolute;
+}
+.toggle-input:checked ~ .slider{
+    background: rgb(31, 247, 31);
+}
+.toggle-input:checked ~ .slider > .button{
+    background: #ccc;
+    left: 46px;
+}
+.toggle-input{
+    display: none;
+}
+label{
+    margin: 5px;
+}
